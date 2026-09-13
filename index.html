@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Реальная цена — стоимость владения автомобилем</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site">
+    <div class="wrap nav">
+      <a href="#top" class="logo">Реальн<span>а</span>я цена</a>
+      <ul class="nav-links">
+        <li><a href="#breakdown">Из чего складывается цена</a></li>
+        <li><a href="#roadmap">Как строится проект</a></li>
+      </ul>
+      <a class="nav-cta" href="#breakdown">Начать расчёт</a>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- главный экран -->
+    <section class="hero wrap">
+      <div class="hero-grid">
+        <div>
+          <h1>Машина стоит не столько, сколько написано в объявлении</h1>
+          <p class="lede">
+            Сервис считает полную стоимость владения автомобилем: не только цену покупки,
+            а всё, что вы отдадите за годы — топливо, страховку, ремонт и падение цены при перепродаже.
+          </p>
+          <div class="hero-actions">
+            <a class="btn-primary" href="#breakdown">Начать расчёт</a>
+            <a class="btn-secondary" href="#roadmap">Как это будет работать</a>
+          </div>
+          <p class="hero-note">Калькулятор в разработке — ниже показано, что он будет считать.</p>
+        </div>
+
+        <!-- пример расчёта, имитация приборной панели -->
+        <div class="cluster">
+          <div class="cluster-label">
+            <span>KIA RIO 1.6 · 5 ЛЕТ ВЛАДЕНИЯ</span>
+            <span>ПРИМЕР</span>
+          </div>
+          <div class="cluster-readout">
+            <span id="counter">0</span><span class="unit">₽</span>
+          </div>
+          <p class="cluster-sub">Полная стоимость владения за 5 лет, при цене покупки 1 350 000 ₽</p>
+
+          <div class="cluster-bars">
+            <div class="cluster-bar-row">
+              <span class="name">Амортизация</span>
+              <span class="cluster-bar-track"><span class="cluster-bar-fill" data-pct="38"></span></span>
+              <span class="pct">38%</span>
+            </div>
+            <div class="cluster-bar-row">
+              <span class="name">Топливо</span>
+              <span class="cluster-bar-track"><span class="cluster-bar-fill" data-pct="27"></span></span>
+              <span class="pct">27%</span>
+            </div>
+            <div class="cluster-bar-row">
+              <span class="name">ТО и ремонт</span>
+              <span class="cluster-bar-track"><span class="cluster-bar-fill" data-pct="21"></span></span>
+              <span class="pct">21%</span>
+            </div>
+            <div class="cluster-bar-row">
+              <span class="name">Страховка</span>
+              <span class="cluster-bar-track"><span class="cluster-bar-fill" data-pct="14"></span></span>
+              <span class="pct">14%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- из чего складывается стоимость -->
+    <section class="section wrap" id="breakdown">
+      <div class="section-head">
+        <h2>Четыре статьи расходов, которые обычно не считают заранее</h2>
+        <p>Цена в объявлении — это только точка входа. Дальше начинаются расходы, растянутые на годы,
+          и о них редко думают до покупки.</p>
+      </div>
+      <div class="panels">
+        <div class="panel">
+          <span class="panel-index">01</span>
+          <h3>Топливо</h3>
+          <p>Расход по паспорту почти всегда ниже реального. Расчёт учитывает город, трассу и стиль езды.</p>
+        </div>
+        <div class="panel">
+          <span class="panel-index">02</span>
+          <h3>Страховка</h3>
+          <p>ОСАГО и КАСКО зависят от возраста водителя, стажа и региона — калькулятор учитывает их отдельно.</p>
+        </div>
+        <div class="panel">
+          <span class="panel-index">03</span>
+          <h3>ТО и ремонт</h3>
+          <p>Плановое обслуживание плюс типичные поломки для конкретной модели на нужном пробеге.</p>
+        </div>
+        <div class="panel">
+          <span class="panel-index">04</span>
+          <h3>Амортизация</h3>
+          <p>Сколько машина потеряет в цене к моменту продажи — обычно самая крупная, но самая незаметная статья.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- план разработки на 4 месяца -->
+    <section class="section wrap" id="roadmap">
+      <div class="section-head">
+        <h2>Проект строится постепенно, за 4 месяца</h2>
+        <p>Сайт разрабатывается в рамках курса по веб-программированию. Ниже — этапы, как задумано сейчас.</p>
+      </div>
+      <div class="roadmap">
+        <div class="road-step active">
+          <span class="road-num">01</span>
+          <div class="road-body">
+            <h3>Главная страница</h3>
+            <p>Структура сайта, объяснение идеи сервиса и разделов будущего калькулятора.</p>
+          </div>
+          <span class="road-status">Готово</span>
+        </div>
+        <div class="road-step">
+          <span class="road-num">02</span>
+          <div class="road-body">
+            <h3>Калькулятор стоимости</h3>
+            <p>Форма ввода марки, модели, региона и срока владения, расчёт по четырём статьям расходов.</p>
+          </div>
+          <span class="road-status">Следующий этап</span>
+        </div>
+        <div class="road-step">
+          <span class="road-num">03</span>
+          <div class="road-body">
+            <h3>База моделей и цен</h3>
+            <p>Подключение реальных данных по расходу топлива, страховке и частоте поломок для популярных моделей.</p>
+          </div>
+          <span class="road-status">Планируется</span>
+        </div>
+        <div class="road-step">
+          <span class="road-num">04</span>
+          <div class="road-body">
+            <h3>Сравнение и экспорт</h3>
+            <p>Сравнение нескольких автомобилей рядом и сохранение расчёта в PDF.</p>
+          </div>
+          <span class="road-status">Планируется</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site wrap">
+    <span>Реальная цена — учебный проект, факультет информационных технологий</span>
+    <span>Курс «Веб-программирование» · 2026</span>
+  </footer>
+
+  <script>
+    // анимация счётчика на приборной панели
+    var counterEl = document.getElementById('counter');
+    var targetValue = 2380000;
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    function formatNumber(n) {
+      return Math.round(n).toLocaleString('ru-RU');
+    }
+
+    if (reduceMotion) {
+      counterEl.textContent = formatNumber(targetValue);
+    } else {
+      var startTime = null;
+      var duration = 1400;
+
+      function animateCounter(timestamp) {
+        if (!startTime) startTime = timestamp;
+        var progress = Math.min((timestamp - startTime) / duration, 1);
+        var eased = 1 - Math.pow(1 - progress, 3);
+        counterEl.textContent = formatNumber(targetValue * eased);
+        if (progress < 1) {
+          requestAnimationFrame(animateCounter);
+        }
+      }
+      requestAnimationFrame(animateCounter);
+    }
+
+    // заполнение полосок расходов
+    var bars = document.querySelectorAll('.cluster-bar-fill');
+    setTimeout(function () {
+      bars.forEach(function (bar) {
+        bar.style.width = bar.dataset.pct + '%';
+      });
+    }, 250);
+  </script>
+
+</body>
+</html>
