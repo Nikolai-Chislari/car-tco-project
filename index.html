@@ -1,75 +1,105 @@
-<!DOCTYPE html>
-<html lang="ru">
+<!doctype html>
+<html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Реальная цена — стоимость владения автомобилем</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Estimate the real cost of owning a car.">
+  <title>True Cost — Car Ownership Calculator</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
+<body>
   <header class="site">
     <div class="wrap nav">
-      <a href="#top" class="logo">Реальн<span>а</span>я цена</a>
-      <ul class="nav-links">
-        <li><a href="#breakdown">Из чего складывается цена</a></li>
-        <li><a href="#roadmap">Как строится проект</a></li>
-      </ul>
-      <a class="nav-cta" href="#breakdown">Начать расчёт</a>
+      <a href="#top" class="logo">True<span>Cost</span></a>
+
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="#costs">What it includes</a></li>
+          <li><a href="#calculator">Calculator</a></li>
+        </ul>
+      </nav>
+
+      <a class="nav-cta" href="#calculator">
+        Calculate my costs
+      </a>
     </div>
   </header>
 
   <main id="top">
-
-    <!-- главный экран -->
     <section class="hero wrap">
       <div class="hero-grid">
         <div>
-          <h1>Машина стоит не столько, сколько написано в объявлении</h1>
-          <p class="lede">
-            Сервис считает полную стоимость владения автомобилем: не только цену покупки,
-            а всё, что вы отдадите за годы — топливо, страховку, ремонт и падение цены при перепродаже.
+          <p class="eyebrow">
+            A clearer way to choose your next car
           </p>
+          <h1>A car costs more than its price tag.</h1>
+          <p class="lede">
+            See what you may really spend over the years:
+            fuel, insurance, maintenance, and depreciation.
+          </p>
+
           <div class="hero-actions">
-            <a class="btn-primary" href="#breakdown">Начать расчёт</a>
-            <a class="btn-secondary" href="#roadmap">Как это будет работать</a>
+            <a class="btn-primary" href="#calculator">
+              Try the calculator
+            </a>
+            <a class="btn-secondary" href="#costs">
+              Explore the costs
+            </a>
           </div>
-          <p class="hero-note">Калькулятор в разработке — ниже показано, что он будет считать.</p>
+
+          <p class="hero-note">
+            Use your own estimates to get a personalized result.
+          </p>
         </div>
 
-        <!-- пример расчёта, имитация приборной панели -->
-        <div class="cluster">
+        <div class="cluster" aria-label="Example car ownership estimate">
           <div class="cluster-label">
-            <span>KIA RIO 1.6 · 5 ЛЕТ ВЛАДЕНИЯ</span>
-            <span>ПРИМЕР</span>
+            <span>EXAMPLE · 5 YEARS</span>
+            <span>ESTIMATE</span>
           </div>
-          <div class="cluster-readout">
-            <span id="counter">0</span><span class="unit">₽</span>
-          </div>
-          <p class="cluster-sub">Полная стоимость владения за 5 лет, при цене покупки 1 350 000 ₽</p>
+
+          <div class="cluster-readout">$26,840</div>
+          <p class="cluster-sub">
+            Estimated ownership cost after resale value
+          </p>
 
           <div class="cluster-bars">
             <div class="cluster-bar-row">
-              <span class="name">Амортизация</span>
-              <span class="cluster-bar-track"><span class="cluster-bar-fill" data-pct="38"></span></span>
+              <span class="name">Depreciation</span>
+              <span class="cluster-bar-track">
+                <span class="cluster-bar-fill" style="--bar-width: 38%"></span>
+              </span>
               <span class="pct">38%</span>
             </div>
+
             <div class="cluster-bar-row">
-              <span class="name">Топливо</span>
-              <span class="cluster-bar-track"><span class="cluster-bar-fill" data-pct="27"></span></span>
+              <span class="name">Fuel</span>
+              <span class="cluster-bar-track">
+                <span class="cluster-bar-fill" style="--bar-width: 27%"></span>
+              </span>
               <span class="pct">27%</span>
             </div>
+
             <div class="cluster-bar-row">
-              <span class="name">ТО и ремонт</span>
-              <span class="cluster-bar-track"><span class="cluster-bar-fill" data-pct="21"></span></span>
+              <span class="name">Maintenance</span>
+              <span class="cluster-bar-track">
+                <span class="cluster-bar-fill" style="--bar-width: 21%"></span>
+              </span>
               <span class="pct">21%</span>
             </div>
+
             <div class="cluster-bar-row">
-              <span class="name">Страховка</span>
-              <span class="cluster-bar-track"><span class="cluster-bar-fill" data-pct="14"></span></span>
+              <span class="name">Insurance</span>
+              <span class="cluster-bar-track">
+                <span class="cluster-bar-fill" style="--bar-width: 14%"></span>
+              </span>
               <span class="pct">14%</span>
             </div>
           </div>
@@ -77,122 +107,214 @@
       </div>
     </section>
 
-    <!-- из чего складывается стоимость -->
-    <section class="section wrap" id="breakdown">
+    <section class="section wrap" id="costs">
       <div class="section-head">
-        <h2>Четыре статьи расходов, которые обычно не считают заранее</h2>
-        <p>Цена в объявлении — это только точка входа. Дальше начинаются расходы, растянутые на годы,
-          и о них редко думают до покупки.</p>
+        <p class="eyebrow">The full picture</p>
+        <h2>Four costs worth knowing before you buy</h2>
+        <p>
+          The asking price is just the beginning.
+          Day-to-day ownership adds up over time.
+        </p>
       </div>
+
       <div class="panels">
-        <div class="panel">
+        <article class="panel">
           <span class="panel-index">01</span>
-          <h3>Топливо</h3>
-          <p>Расход по паспорту почти всегда ниже реального. Расчёт учитывает город, трассу и стиль езды.</p>
-        </div>
-        <div class="panel">
+          <h3>Fuel</h3>
+          <p>
+            Estimate fuel from your annual mileage,
+            fuel economy, and local fuel prices.
+          </p>
+        </article>
+
+        <article class="panel">
           <span class="panel-index">02</span>
-          <h3>Страховка</h3>
-          <p>ОСАГО и КАСКО зависят от возраста водителя, стажа и региона — калькулятор учитывает их отдельно.</p>
-        </div>
-        <div class="panel">
+          <h3>Insurance</h3>
+          <p>
+            Include your estimated yearly premium
+            to understand the cost of coverage.
+          </p>
+        </article>
+
+        <article class="panel">
           <span class="panel-index">03</span>
-          <h3>ТО и ремонт</h3>
-          <p>Плановое обслуживание плюс типичные поломки для конкретной модели на нужном пробеге.</p>
-        </div>
-        <div class="panel">
+          <h3>Maintenance</h3>
+          <p>
+            Allow for servicing, tires,
+            and unexpected repairs.
+          </p>
+        </article>
+
+        <article class="panel">
           <span class="panel-index">04</span>
-          <h3>Амортизация</h3>
-          <p>Сколько машина потеряет в цене к моменту продажи — обычно самая крупная, но самая незаметная статья.</p>
-        </div>
+          <h3>Depreciation</h3>
+          <p>
+            Account for the value your car may lose
+            before you sell it.
+          </p>
+        </article>
       </div>
     </section>
 
-    <!-- план разработки на 4 месяца -->
-    <section class="section wrap" id="roadmap">
+    <section class="section wrap calculator-section" id="calculator">
       <div class="section-head">
-        <h2>Проект строится постепенно, за 4 месяца</h2>
-        <p>Сайт разрабатывается в рамках курса по веб-программированию. Ниже — этапы, как задумано сейчас.</p>
+        <p class="eyebrow">Plan with your numbers</p>
+        <h2>Estimate your car’s total cost</h2>
+        <p>
+          Enter estimates to compare different
+          ownership scenarios.
+        </p>
       </div>
-      <div class="roadmap">
-        <div class="road-step active">
-          <span class="road-num">01</span>
-          <div class="road-body">
-            <h3>Главная страница</h3>
-            <p>Структура сайта, объяснение идеи сервиса и разделов будущего калькулятора.</p>
+
+      <div class="calculator">
+        <form id="cost-form" class="calculator-form">
+          <label>
+            Purchase price
+            <span class="input-wrap">
+              <span class="input-prefix">$</span>
+              <input id="purchase-price" type="number" min="0" step="500" value="30000" required>
+            </span>
+          </label>
+
+          <label>
+            Estimated resale value
+            <span class="input-wrap">
+              <span class="input-prefix">$</span>
+              <input id="resale-value" type="number" min="0" step="500" value="15000" required>
+            </span>
+          </label>
+
+          <label>
+            Years of ownership
+            <span class="input-wrap">
+              <input id="years" type="number" min="1" max="20" value="5" required>
+              <span class="input-suffix">years</span>
+            </span>
+          </label>
+
+          <label>
+            Driving per year
+            <span class="input-wrap">
+              <input id="miles-per-year" type="number" min="0" step="1000" value="12000" required>
+              <span class="input-suffix">miles</span>
+            </span>
+          </label>
+
+          <label>
+            Fuel economy
+            <span class="input-wrap">
+              <input id="mpg" type="number" min="1" value="30" required>
+              <span class="input-suffix">mpg</span>
+            </span>
+          </label>
+
+          <label>
+            Fuel price
+            <span class="input-wrap">
+              <span class="input-prefix">$</span>
+              <input id="fuel-price" type="number" min="0" step="0.05" value="3.50" required>
+              <span class="input-suffix">/ gallon</span>
+            </span>
+          </label>
+
+          <label>
+            Insurance per year
+            <span class="input-wrap">
+              <span class="input-prefix">$</span>
+              <input id="insurance" type="number" min="0" step="100" value="1500" required>
+            </span>
+          </label>
+
+          <label>
+            Maintenance per year
+            <span class="input-wrap">
+              <span class="input-prefix">$</span>
+              <input id="maintenance" type="number" min="0" step="100" value="1000" required>
+            </span>
+          </label>
+        </form>
+
+        <section class="result" aria-live="polite" aria-label="Estimated ownership cost">
+          <p class="result-label">Estimated total cost of ownership</p>
+          <p class="result-total" id="total-cost">$0</p>
+          <p class="result-monthly">
+            <span id="monthly-cost">$0</span>
+            per month on average
+          </p>
+
+          <div class="result-breakdown">
+            <div>
+              <span>Depreciation</span>
+              <strong id="depreciation-cost">$0</strong>
+            </div>
+            <div>
+              <span>Fuel</span>
+              <strong id="fuel-cost">$0</strong>
+            </div>
+            <div>
+              <span>Insurance</span>
+              <strong id="insurance-cost">$0</strong>
+            </div>
+            <div>
+              <span>Maintenance</span>
+              <strong id="maintenance-cost">$0</strong>
+            </div>
           </div>
-          <span class="road-status">Готово</span>
-        </div>
-        <div class="road-step">
-          <span class="road-num">02</span>
-          <div class="road-body">
-            <h3>Калькулятор стоимости</h3>
-            <p>Форма ввода марки, модели, региона и срока владения, расчёт по четырём статьям расходов.</p>
-          </div>
-          <span class="road-status">Следующий этап</span>
-        </div>
-        <div class="road-step">
-          <span class="road-num">03</span>
-          <div class="road-body">
-            <h3>База моделей и цен</h3>
-            <p>Подключение реальных данных по расходу топлива, страховке и частоте поломок для популярных моделей.</p>
-          </div>
-          <span class="road-status">Планируется</span>
-        </div>
-        <div class="road-step">
-          <span class="road-num">04</span>
-          <div class="road-body">
-            <h3>Сравнение и экспорт</h3>
-            <p>Сравнение нескольких автомобилей рядом и сохранение расчёта в PDF.</p>
-          </div>
-          <span class="road-status">Планируется</span>
-        </div>
+
+          <p class="result-note">
+            This is an estimate. Actual costs vary by vehicle,
+            location, and driving habits.
+          </p>
+        </section>
       </div>
     </section>
-
   </main>
 
   <footer class="site wrap">
-    <span>Реальная цена — учебный проект, факультет информационных технологий</span>
-    <span>Курс «Веб-программирование» · 2026</span>
+    <span>True Cost · Car ownership planning tool</span>
+    <span>Make your next car decision with confidence.</span>
   </footer>
 
   <script>
-    // анимация счётчика на приборной панели
-    var counterEl = document.getElementById('counter');
-    var targetValue = 2380000;
-    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const get = id => document.getElementById(id);
+    const form = get('cost-form');
+    const money = new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: 'USD',
+      maximumFractionDigits: 0
+    });
 
-    function formatNumber(n) {
-      return Math.round(n).toLocaleString('ru-RU');
+    function updateEstimate() {
+      if (!form.reportValidity()) return;
+
+      const value = id => Number(get(id).value);
+      const years = value('years');
+      const depreciation = Math.max(
+        0,
+        value('purchase-price') - value('resale-value')
+      );
+      const fuel =
+        value('miles-per-year') / value('mpg') *
+        value('fuel-price') * years;
+      const insurance = value('insurance') * years;
+      const maintenance = value('maintenance') * years;
+      const total = depreciation + fuel + insurance + maintenance;
+
+      const show = (id, amount) => {
+        get(id).textContent = money.format(amount);
+      };
+
+      show('total-cost', total);
+      show('monthly-cost', total / (years * 12));
+      show('depreciation-cost', depreciation);
+      show('fuel-cost', fuel);
+      show('insurance-cost', insurance);
+      show('maintenance-cost', maintenance);
     }
 
-    if (reduceMotion) {
-      counterEl.textContent = formatNumber(targetValue);
-    } else {
-      var startTime = null;
-      var duration = 1400;
-
-      function animateCounter(timestamp) {
-        if (!startTime) startTime = timestamp;
-        var progress = Math.min((timestamp - startTime) / duration, 1);
-        var eased = 1 - Math.pow(1 - progress, 3);
-        counterEl.textContent = formatNumber(targetValue * eased);
-        if (progress < 1) {
-          requestAnimationFrame(animateCounter);
-        }
-      }
-      requestAnimationFrame(animateCounter);
-    }
-
-    // заполнение полосок расходов
-    var bars = document.querySelectorAll('.cluster-bar-fill');
-    setTimeout(function () {
-      bars.forEach(function (bar) {
-        bar.style.width = bar.dataset.pct + '%';
-      });
-    }, 250);
+    form.addEventListener('input', updateEstimate);
+    updateEstimate();
   </script>
-
 </body>
+
 </html>
