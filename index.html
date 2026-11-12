@@ -1,157 +1,141 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta
-    name="description"
-    content="Узнайте, сколько на самом деле стоит владение автомобилем."
-  >
-  <title>Реальная стоимость автомобиля</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin
-  >
-  <link
-    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600;700&display=swap"
-    rel="stylesheet"
-  >
+  <title>The True Cost of Car Ownership</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site">
+  <header class="site-header">
     <div class="wrap nav">
-      <a class="logo" href="#top">Реальная<span>цена</span></a>
+      <a class="logo" href="#top">True<span>Cost</span></a>
 
-      <nav aria-label="Главная навигация">
+      <nav>
         <ul class="nav-links">
-          <li><a href="#costs">Из чего складываются расходы</a></li>
+          <li><a href="#costs">What goes into the cost?</a></li>
         </ul>
       </nav>
 
-      <a class="nav-cta" href="#costs">Узнать расходы</a>
+      <a class="nav-cta" href="#costs">Explore costs</a>
     </div>
   </header>
 
   <main id="top">
     <section class="hero wrap">
-      <div class="hero-grid">
-        <div>
-          <p class="eyebrow">Помогаем выбрать автомобиль осознанно</p>
-          <h1>Автомобиль обходится дороже цены покупки.</h1>
-          <p class="lede">
-            Узнайте, сколько придётся потратить за годы владения:
-            на топливо, страховку, обслуживание и потерю стоимости.
-          </p>
+      <div class="hero-intro">
+        <p class="eyebrow">Make an informed car purchase</p>
+        <h1>A car costs more than its purchase price.</h1>
+        <p class="lede">
+          Find out how much you'll spend over the years on fuel,
+          insurance, maintenance, and depreciation.
+        </p>
 
-          <div class="hero-actions">
-            <a class="btn-primary" href="#costs">Посмотреть расходы</a>
-            <a class="btn-secondary" href="#costs">Полная картина</a>
-          </div>
-
-          <p class="hero-note">
-            Узнайте реальную стоимость до покупки.
-          </p>
+        <div class="hero-actions">
+          <a class="btn-primary" href="#costs">View the costs</a>
+          <a class="btn-secondary" href="#costs">The full picture</a>
         </div>
 
-        <div class="cluster" aria-label="Пример расходов на автомобиль">
-          <div class="cluster-label">
-            <span>ПРИМЕР · 5 ЛЕТ</span>
-            <span>ОЦЕНКА</span>
-          </div>
+        <p class="hero-note">Know the true cost before you buy.</p>
+      </div>
 
-          <div class="cluster-readout">2 380 000 ₽</div>
-          <p class="cluster-sub">
-            Расходы за 5 лет с учётом перепродажи автомобиля
-          </p>
-
-          <div class="cluster-bars">
-            <div class="cluster-bar-row">
-              <span class="name">Потеря стоимости</span>
-              <span class="cluster-bar-track">
-                <span class="cluster-bar-fill" style="--bar-width:38%"></span>
-              </span>
-              <span class="pct">38%</span>
-            </div>
-
-            <div class="cluster-bar-row">
-              <span class="name">Топливо</span>
-              <span class="cluster-bar-track">
-                <span class="cluster-bar-fill" style="--bar-width:27%"></span>
-              </span>
-              <span class="pct">27%</span>
-            </div>
-
-            <div class="cluster-bar-row">
-              <span class="name">Обслуживание</span>
-              <span class="cluster-bar-track">
-                <span class="cluster-bar-fill" style="--bar-width:21%"></span>
-              </span>
-              <span class="pct">21%</span>
-            </div>
-
-            <div class="cluster-bar-row">
-              <span class="name">Страховка</span>
-              <span class="cluster-bar-track">
-                <span class="cluster-bar-fill" style="--bar-width:14%"></span>
-              </span>
-              <span class="pct">14%</span>
-            </div>
-          </div>
+      <div class="cluster">
+        <div class="cluster-label">
+          <span>EXAMPLE · 5 YEARS</span>
+          <span>ESTIMATE</span>
         </div>
+
+        <div class="cluster-readout">₽2,380,000</div>
+        <p class="cluster-sub">
+          Five-year ownership cost after accounting for resale value
+        </p>
+
+        <table class="cluster-bars">
+          <tbody>
+            <tr class="cluster-bar-row">
+              <th scope="row">Depreciation</th>
+              <td>
+                <div class="bar-track">
+                  <div class="bar-fill bar-depreciation"></div>
+                </div>
+              </td>
+              <td class="pct">38%</td>
+            </tr>
+            <tr class="cluster-bar-row">
+              <th scope="row">Fuel</th>
+              <td>
+                <div class="bar-track">
+                  <div class="bar-fill bar-fuel"></div>
+                </div>
+              </td>
+              <td class="pct">27%</td>
+            </tr>
+            <tr class="cluster-bar-row">
+              <th scope="row">Maintenance</th>
+              <td>
+                <div class="bar-track">
+                  <div class="bar-fill bar-maintenance"></div>
+                </div>
+              </td>
+              <td class="pct">21%</td>
+            </tr>
+            <tr class="cluster-bar-row">
+              <th scope="row">Insurance</th>
+              <td>
+                <div class="bar-track">
+                  <div class="bar-fill bar-insurance"></div>
+                </div>
+              </td>
+              <td class="pct">14%</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </section>
 
     <section class="section wrap" id="costs">
       <div class="section-head">
-        <p class="eyebrow">Полная картина</p>
-        <h2>Четыре расхода, о которых стоит знать до покупки</h2>
+        <p class="eyebrow">The full picture</p>
+        <h2>Four costs to consider before buying a car</h2>
         <p>
-          Цена в объявлении — только начало.
-          Повседневные расходы на автомобиль со временем накапливаются.
+          The asking price is only the beginning.
+          Day-to-day car expenses add up over time.
         </p>
       </div>
 
       <div class="panels">
         <article class="panel">
           <span class="panel-index">01</span>
-          <h3>Топливо</h3>
+          <h3>Fuel</h3>
           <p>
-            Расходы зависят от годового пробега,
-            экономичности автомобиля и цены топлива.
+            Fuel costs depend on how far you drive each year,
+            your car's fuel efficiency, and the price of fuel.
           </p>
         </article>
 
         <article class="panel">
           <span class="panel-index">02</span>
-          <h3>Страховка</h3>
-          <p>Учтите примерную стоимость страхового полиса за год.</p>
+          <h3>Insurance</h3>
+          <p>Factor in the estimated cost of a year of car insurance.</p>
         </article>
 
         <article class="panel">
           <span class="panel-index">03</span>
-          <h3>Обслуживание</h3>
-          <p>Плановое обслуживание, шины и неожиданный ремонт.</p>
+          <h3>Maintenance</h3>
+          <p>Budget for routine servicing, tires, and unexpected repairs.</p>
         </article>
 
         <article class="panel">
           <span class="panel-index">04</span>
-          <h3>Потеря стоимости</h3>
-          <p>
-            Учтите, насколько автомобиль может подешеветь
-            к моменту продажи.
-          </p>
+          <h3>Depreciation</h3>
+          <p>Estimate how much value the car may lose by the time you sell it.</p>
         </article>
       </div>
     </section>
   </main>
 
-  <footer class="site wrap">
-    <span>Реальная цена · Планирование расходов на автомобиль</span>
-    <span>Выбирайте следующий автомобиль уверенно.</span>
+  <footer class="site-footer wrap">
+    <span>TrueCost · Car ownership budgeting</span>
+    <span>Choose your next car with confidence.</span>
   </footer>
 </body>
 </html>
