@@ -19,7 +19,7 @@ a:focus {
 }
 
 .wrap {
-  max-width: 1160px;
+  max-width: 90%;
   margin: 0 auto;
   padding-left: 28px;
   padding-right: 28px;
