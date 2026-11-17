@@ -1,141 +1,118 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>The True Cost of Car Ownership</title>
-  <link rel="stylesheet" href="style.css">
+ <meta charset="UTF-8">
+ <title>TrueCost</title>
+ <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <header class="site-header">
-    <div class="wrap nav">
-      <a class="logo" href="#top">True<span>Cost</span></a>
+<body id ="top">
+  <p class="site-name"><strong>TrueCost</strong></p>
+  
+  <h1> A car costs more than its purchase price.</h1>
 
-      <nav>
-        <ul class="nav-links">
-          <li><a href="#costs">What goes into the cost?</a></li>
-        </ul>
-      </nav>
+  <p>
+   Find out how much you'll spend on fuel, insurance, maintenance, and deprecation.
+  </p>
 
-      <a class="nav-cta" href="#costs">Explore costs</a>
-    </div>
-  </header>
+  <div class="photo-background">
+  <img class="car-photo" src="img/car.jpg" alt="">
+</div>
+  <p class="page-links">
+  <a href="#costs">View costs</a>
+  <a href="#own-costs">Estimate your costs</a>
+  <a href="#compare-cars">Compare two cars</a>
+</p>
+<h2 id="costs">Car Ownership Costs</h2>
 
-  <main id="top">
-    <section class="hero wrap">
-      <div class="hero-intro">
-        <p class="eyebrow">Make an informed car purchase</p>
-        <h1>A car costs more than its purchase price.</h1>
-        <p class="lede">
-          Find out how much you'll spend over the years on fuel,
-          insurance, maintenance, and depreciation.
-        </p>
+  <table>
+  <tr>
+    <th>Expense</th>
+    <th>What to consider</th>
+  </tr>
+  <tr>
+    <td><a href="#fuel-example">Fuel</a></td>
+    <td>How far you drive and how much fuel costs.</td>
+  </tr>
+  <tr>
+    <td>Insurance</td>
+    <td>How much you pay for insurance each year.</td>
+  </tr>
+  <tr>
+    <td>Maintenance</td>
+    <td>Oil changes , tires, and repairs.</td>
+  </tr>
+  <tr>
+    <td><a href="#depreciation-example">Depreciation</a></td>
+    <td>How much value your car loses over time.</td>
+  </tr>
+  </table>
+   
+  <h2>Example Annual Costs</h2>
 
-        <div class="hero-actions">
-          <a class="btn-primary" href="#costs">View the costs</a>
-          <a class="btn-secondary" href="#costs">The full picture</a>
-        </div>
+  <p>Your annual costs depend on the car you choose and how much you drive.</p>
 
-        <p class="hero-note">Know the true cost before you buy.</p>
-      </div>
+  <ul>
+    <li>Fuel: €1,200</li>
+    <li>Insurance: €500</li>
+    <li>Maintenance: €400</li>
+    <li>Depreciation: €1,500</li>
+  </ul>
 
-      <div class="cluster">
-        <div class="cluster-label">
-          <span>EXAMPLE · 5 YEARS</span>
-          <span>ESTIMATE</span>
-        </div>
+  <p class="total">
+  <strong>Total: €3,600 per year</strong><br>
+  Average monthly cost: €300<br>
+  Average cost per kilometer: €0.36
+ </p>
 
-        <div class="cluster-readout">₽2,380,000</div>
-        <p class="cluster-sub">
-          Five-year ownership cost after accounting for resale value
-        </p>
+ <p>This example does not include parking, tolls, or annual vehicle taxes.</p>
 
-        <table class="cluster-bars">
-          <tbody>
-            <tr class="cluster-bar-row">
-              <th scope="row">Depreciation</th>
-              <td>
-                <div class="bar-track">
-                  <div class="bar-fill bar-depreciation"></div>
-                </div>
-              </td>
-              <td class="pct">38%</td>
-            </tr>
-            <tr class="cluster-bar-row">
-              <th scope="row">Fuel</th>
-              <td>
-                <div class="bar-track">
-                  <div class="bar-fill bar-fuel"></div>
-                </div>
-              </td>
-              <td class="pct">27%</td>
-            </tr>
-            <tr class="cluster-bar-row">
-              <th scope="row">Maintenance</th>
-              <td>
-                <div class="bar-track">
-                  <div class="bar-fill bar-maintenance"></div>
-                </div>
-              </td>
-              <td class="pct">21%</td>
-            </tr>
-            <tr class="cluster-bar-row">
-              <th scope="row">Insurance</th>
-              <td>
-                <div class="bar-track">
-                  <div class="bar-fill bar-insurance"></div>
-                </div>
-              </td>
-              <td class="pct">14%</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
+ <h2 id="fuel-example"> How We Estimated Fuel Costs</h2>
+ <p class="formula"><strong>Annual fuel cost</strong> = (km driven per year ÷ 100) × liters per 100 km × price per liter.</p>
+ <p>
+  If you drive 10,000 km a year and your car uses 6 liters per 100 km, you need 600 liters of fuel. At €2 per liter, that adds up to €1,200 per year.
+ </p>
 
-    <section class="section wrap" id="costs">
-      <div class="section-head">
-        <p class="eyebrow">The full picture</p>
-        <h2>Four costs to consider before buying a car</h2>
-        <p>
-          The asking price is only the beginning.
-          Day-to-day car expenses add up over time.
-        </p>
-      </div>
+ <h2 id="depreciation-example">How We Estimated Depreciation</h2>
+ <p class="formula"><strong>Average annual depreciation</strong> = (purchase price − resale price) ÷ years owned.</p>
+ <p>
+  If you buy a car for €12,000 and sell it for €7,500 after three years,
+  it loses €4,500 in value. That's an average of €1,500 per year.
+ </p>
 
-      <div class="panels">
-        <article class="panel">
-          <span class="panel-index">01</span>
-          <h3>Fuel</h3>
-          <p>
-            Fuel costs depend on how far you drive each year,
-            your car's fuel efficiency, and the price of fuel.
-          </p>
-        </article>
+ <h2 id="own-costs">Estimate Your Own Costs</h2>
+ <ol>
+  <li>Write down your yearly fuel, insurance, and maintenance costs.</li>
+  <li>Add the amount you expect your car to lose in value each year.</li>
+  <li>Include any yearly costs for parking, tolls, and vehicle taxes.</li>
+  <li>Divide the total by 12 to estimate your monthly cost.</li> 
+  <li>Divide your yearly total by the number of kilometers you drive each year to estimate your cost per kilometer.</li>
+ </ol>
+ <h2 id="compare-cars">Comparing Two Cars</h2>
+ <p>When comparing two cars, use the same annual mileage for both.</p>
+ <table>
+  <tr>
+    <th>Car</th>
+    <th>Cost per year</th>
+    <th>Average cost per month</th>
+  </tr>
+  <tr>
+    <td>Car A</td>
+    <td>€3,600</td>
+    <td>€300</td>
+  </tr>
+  <tr>
+    <td>Car B</td>
+    <td>€4,200</td>
+    <td>€350</td>
+  </tr>
+</table>
 
-        <article class="panel">
-          <span class="panel-index">02</span>
-          <h3>Insurance</h3>
-          <p>Factor in the estimated cost of a year of car insurance.</p>
-        </article>
+<p><strong>Car A costs €50 less per month.</strong></p>
 
-        <article class="panel">
-          <span class="panel-index">03</span>
-          <h3>Maintenance</h3>
-          <p>Budget for routine servicing, tires, and unexpected repairs.</p>
-        </article>
+<p><a href="#top">Back to top</a></p>
+  
 
-        <article class="panel">
-          <span class="panel-index">04</span>
-          <h3>Depreciation</h3>
-          <p>Estimate how much value the car may lose by the time you sell it.</p>
-        </article>
-      </div>
-    </section>
-  </main>
 
-  <footer class="site-footer wrap">
-    <span>TrueCost · Car ownership budgeting</span>
-    <span>Choose your next car with confidence.</span>
-  </footer>
 </body>
+
 </html>
